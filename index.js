@@ -64,6 +64,25 @@ function start_game() {
     let input = document.getElementById("answer");
     input.addEventListener("keyup", capture);
 
+    function capture(e) {
+      if (e.key === 'Enter') {
+    
+        // get the user input value and clear it
+        const final_answer = input.value
+        input.value = ''
+    
+        // store user answer along with latest question
+        last_q = qanda.slice(-1)
+        last_q.user_answer = final_answer
+    
+        // add question and answer data to new list and render new question
+        answer_data.push(last_q)
+        render_question(qdata)
+      }
+    }  
+
+      
+
     start_timer()
     render_question(qdata)
   }
