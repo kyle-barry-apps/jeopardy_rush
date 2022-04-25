@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  scroll-behavior: smooth !important;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity ease-in 2s;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  display: flex;
+  background: linear-gradient(#00084c 40%, rgb(46, 46, 46) 100%);
+  /* background-color: #282323; */
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+  border-radius: 2px;
+  height: 70px;
+  opacity: .95;
+}
+
+.logo-img {
+  height: 45px;
+}
+
+li, a, button {
+  font-weight: 500;
+  font-size: 16px;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+a {
+  transition: opacity .25s;
+}
+
+a:hover {
+  opacity: .8;
+}
+
+.logo {
+  margin-right: auto;
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+
+.btn:hover {
+  opacity: .8;
+}
+
+.btn:active {
+  opacity: .6;
+}
+
+.donate-btn {
+  margin-left: 40px;
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(#f08948, #FF6000);
+}
+

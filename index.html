@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/content.css">
+  <link rel="icon" type="image/x-icon" href="JR!.svg">
+
+  <title>Jeopardy!Rush</title>
+</head>
+<body>
+  <script>
+    document.body.className = 'hidden'
+  </script>
+  <a id="top"></a>
+
+  <header>
+    <div class="logo">
+      <a href="#top"><img class="logo-img" src="JR!.svg" alt="logo"></a>
+    </div>
+    <nav class="navbar-main">
+      <ul class="nav-list">
+        <li><a href="#about-page">About</a></li>
+        <li><a href="#">Download</a></li>
+      </ul>
+    </nav>
+    <a href="https://www.paypal.com/donate/?business=CQWRPALTNSV3E&no_recurring=0&currency_code=USD" target="_blank"><button class="btn donate-btn">Donate</button></a>
+  </header>
+  <div class="grid-container">
+    <div class="undraw">
+      <img class="undraw-img" src="/images/undraw_books_re_8gea.svg" alt="">
+    </div>
+    <div class="description-container">
+      <p class="description"> <span style="color: #FF6000; font-weight:bold;">Jeopardy!Rush</span> is a trivia speed challenge based on Jeopardy! questions. See how many you can get right in 60 seconds. Don't worry about "what is...", and make sure you spell your answers correctly. Ready? </p>
+      <a href="#q-container"><button onclick="start_game()" id="start-btn" class="btn start-btn">Start Rush!</button></a>
+    </div>
+  </div>
+
+  <div id="about-page" class="about-page">
+    <div class="about-desc">
+      <h1>Jeopardy!Rush</h1><br>
+      <p>I love trivia. And I enjoy combining my interests. So, I built <span style="font-weight:bold;">Jeopardy!Rush</span> to practice building a web application while creating something fun to use.
+      <br> <br>The Jeopardy question data was borrowed from this <a href="https://www.kaggle.com/datasets/tunguz/200000-jeopardy-questions" target="_blank">kaggle dataset</a>. I cleaned up the data to make it usable for this project. You can find the jupyter notebook on my <a href="https://github.com/kyle-barry-apps"target="_blank">github</a>.<br><br>
+      <span style='font-weight: 500; font-size: 22px;'>Enjoy!</span></p>
+    </div>
+    <div class="undraw-about">
+      <img class="undraw-about-img" src="/images/undraw_about_me_re_82bv.svg" alt="undraw about me image">
+    </div>
+  </div>
+
+  <div id="q-container">
+    <div class="cat-val">
+      <h5 id="category"></h5>
+      <h5 id="dollar-value"></h5>
+    </div>
+    <div id="question">
+    </div>
+    <section class="answer">
+      <input id="answer" type="text">
+    </section>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
